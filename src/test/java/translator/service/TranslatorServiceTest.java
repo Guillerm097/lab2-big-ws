@@ -25,4 +25,15 @@ public class TranslatorServiceTest {
     assertEquals("Esto es una prueba de servicio de traducción", translatedText.getTranslation());
   }
 
+  @Test
+  public void translateTestEStoYI() {
+    TranslatedText translatedText = translatorService.translate("es", "yi", "El yidis es una lengua milenaria");
+    assertEquals("די ייִדיש איז אַ מיללענאַרי שפּראַך", translatedText.getTranslation());
+  }
+
+  @Test
+  public void translateTestEStoSW() {
+    TranslatedText translatedText = translatorService.translate("es", "lt", "Nunca he estado en Lituania");
+    assertEquals("Aš niekada nebuvo Lietuvoje", translatedText.getTranslation());
+  }
 }
